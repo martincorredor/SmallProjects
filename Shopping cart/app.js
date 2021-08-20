@@ -54,6 +54,7 @@ lista.appendChild(fragment)
 */
 
 //TEMPLATE
+
 //Se crea el siguiente template en el archivo HTML y ahí si se modifica acá
 /*
 <template id="template-li">
@@ -62,7 +63,7 @@ lista.appendChild(fragment)
     </li>
 </template>
 */
-
+/*
 const lista = document.getElementById("lista");
 const arrayElements = ["primero", "segundo", "tercero"];
 
@@ -76,3 +77,43 @@ arrayElements.forEach( item => {
 })
 
 lista.appendChild(fragment)
+*/
+
+
+// ADD EVENT LISTENER
+
+/*
+//const btnAumentar = document.querySelector(".btn-info");
+//const btnDisminuir = document.querySelector(".btn-danger");
+
+const container = document.querySelector(".container");
+const span = document.getElementById("span");
+let contador = 0;
+
+
+btnAumentar.addEventListener("click", () => {
+  contador++;
+  span.textContent = contador;
+});
+
+btnDisminuir.addEventListener('click', () => {
+    contador--;
+    span.textContent = contador;
+})
+
+
+container.addEventListener("click", (e) => {
+  //console.log(e.target.classList.contains("btn-info"));
+
+  if (e.target.classList.contains("btn-info")) {
+    contador++;
+    span.textContent = contador;
+  }
+
+  if (e.target.classList.contains("btn-danger")) {
+    contador--;
+    span.textContent = contador;
+  }
+  e.stopPropagation() //Ésto para que se limite sólo al elemento en cuestion y nó ejecute funciones del padre
+});
+*/
