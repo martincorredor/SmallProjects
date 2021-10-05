@@ -53,41 +53,62 @@ skillsHeader.forEach((el) => {
 const tabs = document.querySelectorAll('[data-target]'),
   tabContents = document.querySelectorAll('[data-content]');
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', ()=> {
-        const target = document.querySelector(tab.dataset.target)
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.target);
 
-        tabContents.forEach(tabContent =>{
-            tabContent.classList.remove('qualification_active')
-        })
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove('qualification_active');
+    });
 
-        target.classList.add('qualification_active')
+    target.classList.add('qualification_active');
 
-        tab.forEach(tab =>{
-            tab.classList.remove('qualification_active')
-        })
-        tab.classList.add('qualification_active')
-    })
-})
+    tab.forEach((tab) => {
+      tab.classList.remove('qualification_active');
+    });
+    tab.classList.add('qualification_active');
+  });
+});
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiper = new Swiper(".portfolio_container", {
-    cssMode: true,
-    loop: true,
+let swiper = new Swiper('.portfolio_container', {
+  cssMode: true,
+  loop: true,
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickeable: true,
-    },
-  });
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickeable: true,
+  },
+});
 /*==================== TESTIMONIAL ====================*/
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]');
 
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+  
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    let sectionId = current.getAttribute('id');
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector('.nav__menu a[href*=' + sectionId + ']')
+        .classList.add('active-link');
+    } else {
+      document
+        .querySelector('.nav__menu a[href*=' + sectionId + ']')
+        .classList.remove('active-link');
+    }
+  });
+}
+window.addEventListener('scroll', scrollActive);
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 
 /*==================== SHOW SCROLL UP ====================*/
