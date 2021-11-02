@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+/*================== GOOGLE FONTS ===================*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Old+Standard+TT:wght@400;700&family=Oswald:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: daily-font;
+  src: url(./dailyFont.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: titles-bold;
+  src: url(./HEADOH__.TTF);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: titles-semibold;
+  src: url(./HEADTH__.TTF);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: capital-letter-deg;
+  src: url(./Capital-letters-deg.ttf);
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: capital-letter;
+  src: url(./capital-letters.ttf);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*==================== VARIABLES CSS ===========================*/
+:root{
+  /*=============== hsl colors ====================*/
+  --color-rosa: hsl(297, 67%, 91%);
+  --daily-color: hsl(31, 47%, 88%);
+
+  --letter-title:hsl(0, 0%, 0%);
+  --letter-capital: hsl(31, 7%, 14%);
+  --letter-capital-secundary: hsl(31, 7%, 27%);
+  --letter-subtitle: hsl(31, 7%, 39%);
+  --text-color: hsl(31, 7%, 48%);
+  
+  /*====================== Fonts =======================*/
+  --body-font: 'Poppins', sans-serif;
+
+  --daily-font:'daily-font', sans-serif;
+  --titles-bold-font: 'titles-bold', sans-serif;
+  --titles-semibold-font:'titles-semibold', sans-serif;
+  --capital-letter-font:'capital-letter', sans-serif;
+  --capital-letter-deg-font:'capital-letter-deg', sans-serif;
+
+  --first-font: 'Cormorant+Garamond', sans-serif;
+  --second-font: 'Old+Standard+TT', sans-serif;
+  --third-font: 'Oswald', sans-serif;
+
+
+  /*================== Font size ========================*/
+
+  /* 3rem: 48px   2rem: 32px   1.5rem: 24px   1rem: 16px  .75rem: 12px  .5rem: 8px   .25rem: 4px  */
+  --principal-title-font-size: 3rem;
+  --daily-font-size:2rem;
+  --title-font-size: 2rem;
+  --title2-font-size: 1.75rem;
+  --subtitle-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --text-font-size: .75rem;
+  --small-font-size:.5rem;
+
+  --high-font-size:5rem;
+  --higher-font-size:8rem;
+
+  /*================== Font weight ========================*/
+  --font-weight-1:700;
+  --font-weight-2:500;
+  --font-weight-3:400;
+  --font-weight-4:300;
+}
+
+/*=============================================*/
+body{
+  font-family: var(--body-font);
+}
+
+.daily-font{
+  font-family: var(--daily-font);
+  font-size: var(--daily-font-size);
+}
+
+.capital-letter{
+  font-family: var(--capital-letter-font);
+  font-size: var(--principal-title-font-size);
+}
+
+.capital-letter-deg{
+  font-family: var(--capital-letter-deg-font);
+  font-size: var(--principal-title-font-size);
+}
+
+.title-bold{
+  font-family: var(--titles-bold-font);
+  font-size: var(--principal-title-font-size);
+}
+
+.title-semibold{
+  font-family: var(--titles-semibold-font);
+  font-size: var(--title-font-size);
+}
+
+.font1{
+  font-family: var(--first-font);
+  font-size: var(--title2-font-size);
+}
+
+.font2{
+  font-family: var(--second-font);
+  font-size: var(--title2-font-size);
+}
+
+.font3{
+  font-family: var(--third-font);
 }
