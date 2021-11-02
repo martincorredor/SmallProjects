@@ -1,9 +1,10 @@
 import './App.css';
+import NavMenu from './components/nav menu';
 
 function App() {
   return (
     <div className="App">
-      <div className="">Letra normal para el menú principal</div>
+      <NavMenu />
       <div className="daily-font">Daily Prophet</div>
       <div className="title-bold">DUMBLEDORE:</div>
       <div className="title-semibold">DAFT OR DANGEROUS</div>
