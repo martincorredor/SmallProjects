@@ -1,13 +1,13 @@
 import React from 'react';
 
-function NavMenu(){
-    return(
-        <div className="nav-menu">
-            <div>Martin</div>
-            <div>Other projects</div>
-            <div>Daily Prophet</div>
-        </div>
-    )
+function NavMenu() {
+  return (
+    <div className="nav">
+      <a href="#">Martin</a>
+      <a href="#">My Portfolio</a>
+      <i class="uil uil-moon change-theme" id="theme-button"></i>
+    </div>
+  );
 }
 
-export default NavMenu
+export default NavMenu;

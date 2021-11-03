@@ -34,10 +34,10 @@
   --color-rosa: hsl(297, 67%, 91%);
   --daily-color: hsl(31, 47%, 88%);
 
-  --letter-title:hsl(0, 0%, 0%);
-  --letter-capital: hsl(31, 7%, 14%);
-  --letter-capital-secundary: hsl(31, 7%, 27%);
-  --letter-subtitle: hsl(31, 7%, 39%);
+  --letter-title-color:hsl(0, 0%, 0%);
+  --letter-capital-color: hsl(31, 7%, 14%);
+  --letter-capital-secundary-color: hsl(31, 7%, 27%);
+  --letter-subtitle-color: hsl(31, 7%, 39%);
   --text-color: hsl(31, 7%, 48%);
   
   /*====================== Fonts =======================*/
@@ -138,7 +138,7 @@ body{
 
 /*====================  NAV MENU  =========================*/
 
-.nav-menu{
+.nav{
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -148,6 +148,16 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: red;
   align-items: center;
+}
+
+.nav a, i{
+  text-align: center;
+  color: var(--letter-title-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav a:hover, i:hover{
+  color: blue;
 }
