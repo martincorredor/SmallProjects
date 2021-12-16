@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Buttons from './Buttons';
-import Menu from './Menu';
+import DropdownMenu from './DropdownMenu';
+import NavMenu from './NavMenu';
 
 const Header = (props) => {
   const [navMenu, setNavMenu] = useState(false)
@@ -14,8 +15,10 @@ const Header = (props) => {
 
   return (
     <header className="header" id="header" >
+      {/*  <a href="#home" className="nav_logo">BC Handicrafts</a>*/}
+      <NavMenu/>
       <nav className="nav">
-          {navMenu ? <Menu hideMenu={hideMenu}/> : <Buttons showMenu={showMenu} /> }
+          {navMenu ? <DropdownMenu hideMenu={hideMenu}/> : <Buttons showMenu={showMenu}/> }
       </nav> 
     </header>
   );

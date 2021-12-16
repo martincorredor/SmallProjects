@@ -1,19 +1,11 @@
 import React from 'react';
 
-const Menu = (props) => {
-    const printing = () => {
-        console.log('funciona')
-    }
-
-    const showMenu = () => {
-        console.log('boton de la x')
-    }
-
+const NavMenu = (props) => {
   return (
     <div className="nav_menu" id="nav-menu">
-      <ul className="nav_list grid">
+      <ul className="nav_list">
         <li className="nav_item">
-          <a href="#home" className="nav_link" onClick={printing}>
+          <a href="#home" className="nav_link">
             <i className="uil uil-estate nav_icon"></i> Home
           </a>
         </li>
@@ -32,15 +24,16 @@ const Menu = (props) => {
             <i className="uil uil-comments-alt nav_icon"></i> Comments
           </a>
         </li>
+      </ul>
+      <ul className="nav_list">
         <li className="nav_item">
           <a href="#session" className="nav_link">
             <i className="uil uil-user nav_icon"></i> Session
           </a>
         </li>
       </ul>
-      <i className="uil uil-times nav_close" id="nav-close" onClick={props.hideMenu}></i>
     </div>
   );
 };
 
-export default Menu;
+export default NavMenu;
