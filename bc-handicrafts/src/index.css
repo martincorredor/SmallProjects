@@ -85,7 +85,7 @@ body.dark-theme {
 
 /*========== Button Dark/Light ==========*/
 
-.change-theme {
+.change_theme {
   font-size: 1.2rem;
   color: var(--title-color);
   margin-right: var(--mb-1);
@@ -244,6 +244,8 @@ img {
   grid-template-columns: auto auto auto;
   grid-template-rows: 50% 50%;
   grid-gap: 1rem;
+  margin: 0 0 0 2rem;
+  margin: 0;
 }
 
 .drop_item {
@@ -258,9 +260,8 @@ img {
 }
 
 .drop_close {
-  font-size: 1.2rem;
-  margin-left: auto;
-  left: 100;
+  font-size: 1.3rem;
+  margin-left: 92%;
   cursor: pointer;
 }
 
@@ -305,6 +306,23 @@ img {
   .nav_toggle {
     display: flex;
   }
+}
+
+@media screen and (max-width: 396px) {
+  .drop_list{
+    grid-gap: 0.5rem;
+    grid-template-rows: auto;
+    padding: 0 0 0 1rem;
+    margin: 0;
+    max-width: 100%;
+  }
+  .drop_item{
+    padding: 0;
+  }
+  .drop_link {
+    font-size: .9rem;
+  }
+  
 }
 
 @media screen and (min-width: 1024px) {
