@@ -15,11 +15,9 @@ const Header = (props) => {
 
   return (
     <header className="header" id="header" >
-      {/*  <a href="#home" className="nav_logo">BC Handicrafts</a>*/}
       <NavMenu/>
-      <nav className="nav">
-          {navMenu ? <DropdownMenu hideMenu={hideMenu}/> : <Buttons showMenu={showMenu}/> }
-      </nav> 
+      {navMenu ? <DropdownMenu hideMenu={hideMenu}/> : <Buttons showMenu={showMenu}/> }
+      
     </header>
   );
 };
