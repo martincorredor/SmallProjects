@@ -1,27 +1,19 @@
-import { useState, useEffect } from 'react';
-
+import React from 'react';
 
 
 const Prueba = (props) => {
-    const { height, width } = props.windowData;
-
-    const [nane, setNane] = useState(true);
-
-    function soyNane(){
-      if (width < 600) {
-        setNane(false)
-      } else {
-        setNane(true)
-      }
-    }
-    
   
-    return (
-      <div>
-        {nane ? <div>Soy nane</div> : <div>Toy chikito</div> }
-        width: {width} ~ height: {height}
-      </div>
-    );
-  }
 
-  export default Prueba;
+  return (
+    <div>
+      <h1>Device Test!</h1>
+      {props.screens.isDesktopOrLaptop && <p>You are a desktop or laptop</p>}
+      {props.screens.isTablet && <p>You have a table</p>}
+      {props.screens.isMobile && <p>You are a mobile phone</p>}
+      <p>Your are in {props.screens.isPortrait ? 'portrait' : 'landscape'} orientation</p>
+      {props.screens.isRetina && <p>You are retina</p>}
+    </div>
+  );
+};
+
+export default Prueba;

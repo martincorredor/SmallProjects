@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
-import Buttons from './Buttons';
+import MenuMobile from './MenuMobile';
 import DropdownMenu from './DropdownMenu';
 import NavMenu from './NavMenu';
 
 const Header = (props) => {
-  const [navMenu, setNavMenu] = useState(false)
+  const [navMenu, setNavMenu] = useState(false);
 
-  const showMenu = () =>{
-    setNavMenu(true)
-  }
+  const showMenu = () => {
+    setNavMenu(true);
+  };
   const hideMenu = () => {
-    setNavMenu(false)
-  }
+    setNavMenu(false);
+  };
 
   return (
-    <header className="header" id="header" >
-      <NavMenu/>
-      {navMenu ? <DropdownMenu hideMenu={hideMenu}/> : <Buttons showMenu={showMenu}/> }
-      
+    <header className="header" id="header">
+      {props.screens.isLongScreen && <NavMenu />}
+      {navMenu ? (
+        <DropdownMenu hideMenu={hideMenu} />
+      ) : (
+        <MenuMobile showMenu={showMenu} screens={props.screens} />
+      )}
     </header>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ThemeButton = () =>{
-    return <div>SOY LA PRUEBA</div>
+    return <i className="uil uil-moon change_theme" id="theme-button"></i>
 }
 
 export default ThemeButton;
